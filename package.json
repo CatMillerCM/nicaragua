@@ -1,0 +1,13 @@
+{
+  "name": "express-app-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./src",
+    "dev": "nodemon ./src"
+  },
+  "author": "",
+  "license": "ISC"
+}
