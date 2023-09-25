@@ -4,13 +4,15 @@ This is a basic Express app template that listens on port 8080.
 
 It contains a simple health check endpoint that returns a 200 status code and message.
 
-It is set up with eslint ([airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)) and jest testing.
+It is set up with eslint ([airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)) for linting, nodemon for developing, and jest for testing.
 
 ## To Run
 
 Install the dependencies in the package.json file using `npm i`.
 
 Then run `npm start` and go to `http://localhost:8080/health-check` in the browser. The "Up and running..." message should be displayed.
+
+To see live changes while developing, use `npm run dev` instead of `npm start`.
 
 ## To Test
 
