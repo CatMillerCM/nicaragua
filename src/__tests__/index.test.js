@@ -115,6 +115,54 @@ describe('GET /parties', () => {
   });
 });
 
+describe('GET /party/:party', () => {
+  let result;
+
+  describe('when party does exist', () => {
+    beforeAll(async () => {
+      const request = supertest(app);
+
+      result = await request
+        .get('/party/sunday-funday')
+        .send();
+    });
+
+    it('should return a 200 status code', () => {
+      expect(result.statusCode).toBe(200);
+    });
+
+    it('should return the correct party data', () => {
+      expect(result.body).toEqual(expect.objectContaining(
+        {
+          name: 'Sunday Funday',
+          day: 'sunday',
+          location: 'san juan del sur',
+          organising_venue: 'Pachamama Hostel',
+          instagram: 'sundayfunday_poolcrawl',
+        },
+      ));
+    });
+  });
+
+  describe('when party does not exist', () => {
+    beforeAll(async () => {
+      const request = supertest(app);
+
+      result = await request
+        .get('/party/invalid-party')
+        .send();
+    });
+
+    it('should return a 404 status code', () => {
+      expect(result.statusCode).toBe(404);
+    });
+
+    it('should return an error message', () => {
+      expect(result.body).toEqual({ error: 'Party not found' });
+    });
+  });
+});
+
 describe('when an invalid route is entered', () => {
   let result;
 
