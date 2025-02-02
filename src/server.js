@@ -39,7 +39,7 @@ app.get('/parties', (req, res) => {
   });
 });
 
-app.get('/party/:name', (req, res) => {
+app.get('/parties/:name', (req, res) => {
   const partyName = req.params.name.replace(/-/g, ' ').toLowerCase();
 
   const sql = 'SELECT * FROM nicaragua_parties WHERE LOWER(name) = ?';

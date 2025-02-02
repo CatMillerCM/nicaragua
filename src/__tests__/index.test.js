@@ -115,7 +115,7 @@ describe('GET /parties', () => {
   });
 });
 
-describe('GET /party/:party', () => {
+describe('GET /parties/:party', () => {
   let result;
 
   describe('when party does exist', () => {
@@ -123,7 +123,7 @@ describe('GET /party/:party', () => {
       const request = supertest(app);
 
       result = await request
-        .get('/party/sunday-funday')
+        .get('/parties/sunday-funday')
         .send();
     });
 
@@ -149,7 +149,7 @@ describe('GET /party/:party', () => {
       const request = supertest(app);
 
       result = await request
-        .get('/party/invalid-party')
+        .get('/parties/invalid-party')
         .send();
     });
 
