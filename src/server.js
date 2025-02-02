@@ -39,6 +39,6 @@ app.get('/parties', (req, res) => {
   });
 });
 
-app.get('/health-check', async (req, res) => res.status(200).send('Up and running...'));
+app.use((req, res) => res.status(404).json({ error: 'Route not found' }));
 
 module.exports = app;
