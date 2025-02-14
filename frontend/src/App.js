@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const API_URL = 'http://localhost:8080';
+const API_URL = 'https://nicaragua-api.cat-miller.com';
 
 function App() {
   const [parties, setParties] = useState([]);
