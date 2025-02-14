@@ -17,6 +17,6 @@ I was eager to throw myself back into the backend for this project, and really e
 Have a play about and see which party takes your fancy, or filter down to your desired day or location.
 
 Frontend hosted independently [here](https://nicaragua.cat-miller.com/).
-Backend hosted independently [here](https://nicaragua-api.cat-miller.com/).
+Backend hosted independently [here](https://nicaragua-api.cat-miller.com/parties).
 
 A full write up, with further information about the project, can be found on [What's My Country Code - Nicaragua](https://whatsmycountrycode.cat-miller.com/nicaragua).
