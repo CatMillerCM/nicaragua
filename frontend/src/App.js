@@ -9,7 +9,7 @@ function App() {
   const [location, setLocation] = useState('');
   const [day, setDay] = useState('');
 
-  const daysOfWeek = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+  const daysOfWeek = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'fluctuating'];
 
   useEffect(() => {
     fetch(`${API_URL}/parties`)
@@ -21,7 +21,7 @@ function App() {
       .then(res => res.json())
       .then(data => setLocations(data))
       .catch(err => console.error('Error fetching locations:', err));
-  }, [location, day]);
+  }, []);
 
   const searchParties = () => {
     let query = `${API_URL}/parties`;
@@ -43,6 +43,11 @@ function App() {
   const clearFilters = () => {
     setLocation('');
     setDay('');
+
+    fetch(`${API_URL}/parties`)
+    .then(res => res.json())
+    .then(data => setParties(data))
+    .catch(err => console.error('Error fetching data:', err));
   };
 
   return (
@@ -65,8 +70,8 @@ function App() {
           ))}
         </select>
         <div className="buttons">
-          <button className="searchButton" onClick={searchParties} disabled={!location && !day}>Search</button>
-          <button className="clearButton" onClick={clearFilters} disabled={!location && !day}>Clear</button>
+          <button className="searchButton" onClick={searchParties} disabled={Boolean(!location && !day)}>Search</button>
+          <button className="clearButton" onClick={clearFilters} disabled={Boolean(!location && !day)}>Clear</button>
         </div>
       </div>
       <div className="partiesContainer">
@@ -77,10 +82,12 @@ function App() {
                 <p className="partyName">{party.name}</p>
                 <p className="partyLocationDay">{party.location} ~ {party.day}</p>
               </div>
-              <div className="partyImage"></div>
+              <div className="partyImage">
+                <img src={party.image} alt={`Promotional post for ${party.name}`}></img>
+              </div>
               <div>
                 <p>Instagram:</p>
-                <p className="partyInstagram">@{party.instagram}</p>
+                <a className="partyInstagram" href={`https://www.instagram.com/${party.instagram}`} target="_blank">@{party.instagram}</a>
               </div>
             </div>
           ))
