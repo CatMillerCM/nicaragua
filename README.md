@@ -20,11 +20,3 @@ Frontend hosted independently [here](https://nicaragua.cat-miller.com/).
 Backend hosted independently [here](https://nicaragua-api.cat-miller.com/).
 
 A full write up, with further information about the project, can be found on [What's My Country Code - Nicaragua](https://whatsmycountrycode.cat-miller.com/nicaragua).
-
-TO DO:
-
-- get frontend tests working
-- \*host backend and update urls in code and tests
-- \*host frontend
-- \*add images to CC writeup
-- social media post
