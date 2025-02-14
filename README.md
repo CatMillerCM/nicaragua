@@ -1,4 +1,4 @@
-# Mayan Calender Codex
+# RavePI
 
 Welcome to Nicaragua's project: RavePI.
 
@@ -24,9 +24,6 @@ A full write up, with further information about the project, can be found on [Wh
 TO DO:
 
 - get frontend tests working
-- \*add static image urls to db
-- render images on page
-- \*add any further parties
 - \*host backend and update urls in code and tests
 - \*host frontend
 - \*add images to CC writeup
