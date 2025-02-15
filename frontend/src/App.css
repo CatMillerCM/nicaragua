@@ -35,11 +35,6 @@
   border-radius: 10px;
   padding: 0 0.5rem;
   font-size: 1rem;
-  text-transform: capitalize;
-}
-
-.locationSelect option, .daySelect option {
-  text-transform: capitalize;
 }
 
 .buttons {

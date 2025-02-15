@@ -50,6 +50,10 @@ function App() {
     .catch(err => console.error('Error fetching data:', err));
   };
 
+  const capitalise = (word) => {
+    return word.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  }
+
   return (
     <div className="main">
       <div>
@@ -59,14 +63,14 @@ function App() {
       <div className="selectors">
         <select className="locationSelect" value={location} onChange={(e) => setLocation(e.target.value)}>
           <option value="">Filter by location</option>
-          {locations.map((loc, index) => (
-            <option key={index} value={loc}>{loc}</option>
+          {locations.map((location, index) => (
+            <option key={index} value={location}>{capitalise(location)}</option>
           ))}
         </select>
         <select className="daySelect" value={day} onChange={(e) => setDay(e.target.value)}>
           <option value="">Filter by day</option>
           {daysOfWeek.map((day, index) => (
-            <option key={index} value={day.toLowerCase()}>{day}</option>
+            <option key={index} value={day.toLowerCase()}>{capitalise(day)}</option>
           ))}
         </select>
         <div className="buttons">
