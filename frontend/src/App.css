@@ -31,6 +31,7 @@
   width: 10.5rem;
   background-color: lightcyan;
   height: 2rem;
+  border: 2px solid lightseagreen;
   border-radius: 10px;
   padding: 0 0.5rem;
   font-size: 1rem;
