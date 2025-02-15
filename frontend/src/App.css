@@ -33,6 +33,10 @@
   text-transform: capitalize;
 }
 
+.locationSelect option, .daySelect option {
+  text-transform: capitalize;
+}
+
 .buttons {
   display: flex;
   gap: 0.5rem;
