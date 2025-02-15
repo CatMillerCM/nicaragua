@@ -5,16 +5,19 @@
   gap: 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  padding: 1rem;
 }
 
 .title {
   color: lightseagreen;
   margin-bottom: 0;
+  font-size: 3rem;
 }
 
 .intro {
   color: black;
   margin-top: 0.25rem;
+  font-size: 1.25rem;
 }
 
 .selectors {
@@ -25,11 +28,12 @@
 }
 
 .locationSelect, .daySelect {
-  width: 10rem;
+  width: 10.5rem;
   background-color: lightcyan;
   height: 2rem;
   border-radius: 10px;
   padding: 0 0.5rem;
+  font-size: 1rem;
   text-transform: capitalize;
 }
 
